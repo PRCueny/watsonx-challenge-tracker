@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use Case Details | watsonx Challenge Ideas Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <img src="assets/ibm-logo.svg" alt="IBM Logo" class="ibm-logo" onerror="this.style.display='none'">
+                <h1>watsonx Challenge Ideas</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">All Use Cases</a>
+                <a href="form.html">Submit New</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Loading State -->
+        <div id="loadingState" class="text-center" style="padding: 4rem;">
+            <div class="loading" style="width: 40px; height: 40px; margin: 0 auto;"></div>
+            <p style="margin-top: 1rem; color: var(--ibm-gray-70);">Loading use case...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="empty-state hidden">
+            <div class="empty-state-icon">⚠️</div>
+            <h3 class="empty-state-title">Use Case Not Found</h3>
+            <p class="empty-state-text">The requested use case could not be found.</p>
+            <a href="index.html" class="btn btn-primary">Back to All Use Cases</a>
+        </div>
+
+        <!-- Content Container -->
+        <div id="contentContainer" class="hidden">
+            <!-- Back Button -->
+            <div style="margin-bottom: 1.5rem;">
+                <a href="index.html" class="btn btn-ghost">← Back to All Use Cases</a>
+            </div>
+
+            <!-- Use Case Title -->
+            <h2 class="page-title" id="useCaseTitle"></h2>
+            
+            <!-- Metadata -->
+            <div class="card-meta" id="useCaseMeta" style="margin-bottom: 2rem;"></div>
+
+            <!-- Action Buttons -->
+            <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <button onclick="editUseCase()" class="btn btn-primary">✏️ Edit Use Case</button>
+                <button onclick="deleteUseCase()" class="btn btn-danger">🗑️ Delete Use Case</button>
+            </div>
+
+            <!-- Scope Section -->
+            <div class="detail-section">
+                <h3>Scope</h3>
+                <p id="scopeContent"></p>
+            </div>
+
+            <!-- Benefits Section -->
+            <div class="detail-section">
+                <h3>Benefits</h3>
+                <p id="benefitsContent"></p>
+            </div>
+
+            <!-- Outputs Section -->
+            <div class="detail-section">
+                <h3>Outputs</h3>
+                <p id="outputsContent"></p>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="detail-section" id="commentsSection">
+                <h3>Comments / Additional Notes</h3>
+                <p id="commentsContent"></p>
+            </div>
+
+            <!-- Team Members Section -->
+            <div class="detail-section">
+                <h3>Team Members</h3>
+                <p style="color: var(--ibm-gray-70); margin-bottom: 1.5rem;">
+                    Click on a team member to add or update their photo, name, and title.
+                </p>
+                <div class="team-members" id="teamMembersContainer">
+                    <!-- Team members will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Team Member Edit Modal (Hidden by default) -->
+    <div id="editMemberModal" class="modal hidden" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 2000; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 2rem; max-width: 500px; width: 90%; max-height: 90vh; overflow-y: auto;">
+            <h3 style="margin-bottom: 1.5rem;">Edit Team Member</h3>
+            
+            <div class="form-group">
+                <label class="form-label">Email</label>
+                <input type="email" id="modalEmail" class="form-input" readonly style="background-color: var(--ibm-gray-20);">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" id="modalName" class="form-input" placeholder="Enter full name">
+                <div class="form-helper">This will be displayed on the team member card</div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Title</label>
+                <input type="text" id="modalTitle" class="form-input" placeholder="Enter job title">
+                <div class="form-helper">e.g., Senior Software Engineer, Product Manager</div>
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Photo</label>
+                <input type="file" id="modalPhoto" accept="image/*" style="margin-bottom: 0.5rem;">
+                <div class="form-helper">Upload a profile photo (optional). For BluePages integration in the future, this will be automatic.</div>
+                <div id="photoPreview" style="margin-top: 1rem;"></div>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                <button onclick="saveMemberEdit()" class="btn btn-primary">💾 Save</button>
+                <button onclick="closeEditModal()" class="btn btn-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>

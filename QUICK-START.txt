@@ -1,0 +1,102 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║          IBM watsonx Challenge Ideas Tracker - QUICK START GUIDE          ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+🚀 GET STARTED IN 3 EASY STEPS:
+
+1. OPEN THE APPLICATION
+   ────────────────────────────────────────────────────────────────────────
+   • Double-click "index.html" to open in your default browser
+   • OR right-click "index.html" → Open With → Choose your browser
+   
+   ✓ Works on: Chrome, Firefox, Safari, Edge (latest versions)
+   ✓ No installation or server required!
+
+
+2. ADD IBM LOGO (OPTIONAL)
+   ────────────────────────────────────────────────────────────────────────
+   • Download IBM logo from IBM Brand Center or Marketing Resources
+   • Save as "ibm-logo.svg" in the "assets" folder
+   • See "assets/IBM-LOGO-INSTRUCTIONS.txt" for detailed steps
+   
+   📌 The app works perfectly without the logo - it will be hidden automatically
+
+
+3. CREATE YOUR FIRST USE CASE
+   ────────────────────────────────────────────────────────────────────────
+   • Click the "New Use Case" button
+   • Fill in the required information:
+     - Use Case Name
+     - Scope
+     - Benefits  
+     - Outputs
+     - Team Member Emails
+   • Add optional comments/notes
+   • Click "Save Use Case"
+
+
+📖 WHAT YOU CAN DO:
+
+   ✓ Submit new watsonx challenge ideas
+   ✓ Track team members and their contributions
+   ✓ Search and filter all use cases
+   ✓ Add team member photos, names, and titles
+   ✓ Export/import data to share with teammates
+   ✓ Edit and delete use cases
+
+
+💾 DATA STORAGE:
+
+   • All data is stored locally in your browser
+   • Data persists between sessions
+   • To share with teammates:
+     - Use Export/Import buttons, OR
+     - Share the entire "website files" folder
+
+
+📚 NEED MORE HELP?
+
+   • Read the full README.md file for detailed instructions
+   • Check IBM-LOGO-INSTRUCTIONS.txt for branding setup
+   • All files are self-contained - no internet connection needed!
+
+
+🎨 IBM BRANDING:
+
+   This application follows IBM Carbon Design System guidelines:
+   • IBM Plex Sans font family
+   • Official IBM color palette
+   • IBM design patterns and components
+   
+   Resources:
+   • https://www.ibm.com/brand/experience-guides/
+   • https://carbondesignsystem.com/
+
+
+⚡ TIPS FOR SUCCESS:
+
+   1. Add team member emails when creating use cases
+   2. Click on team members to add their photos and details
+   3. Use the search bar to quickly find specific use cases
+   4. Export your data regularly as a backup
+   5. Share the folder with teammates to collaborate
+
+
+🔮 FUTURE ENHANCEMENTS:
+
+   • BluePages API integration (automatic employee data)
+   • Status tracking (Draft, In Progress, Completed)
+   • Comments and collaboration features
+   • File attachments
+   • Advanced analytics
+
+
+═══════════════════════════════════════════════════════════════════════════
+
+Questions? Check the README.md file or contact your team administrator.
+
+Built for IBM watsonx Challenge Teams | Version 1.0.0 | June 2026
+
+═══════════════════════════════════════════════════════════════════════════

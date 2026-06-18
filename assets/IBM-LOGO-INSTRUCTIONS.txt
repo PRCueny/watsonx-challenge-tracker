@@ -1,0 +1,58 @@
+IBM LOGO SETUP INSTRUCTIONS
+============================
+
+To add the official IBM logo to your watsonx Challenge Ideas Tracker:
+
+1. DOWNLOAD THE IBM LOGO
+   
+   Option A - IBM Brand Center:
+   - Visit: https://www.ibm.com/brand/experience-guides/
+   - Navigate to the logo section
+   - Download the IBM 8-bar logo in SVG format
+   
+   Option B - IBM Consulting Marketing Resources:
+   - Visit: https://w3.ibm.com/consulting/contentplus/ibm-consulting-marketing-communications-resources/marketing-kit
+   - Look for the IBM logo assets
+   - Download the appropriate logo file
+
+2. SAVE THE LOGO FILE
+   
+   - Save the downloaded logo as: ibm-logo.svg
+   - Place it in this folder (assets/)
+   - The file should be named exactly: ibm-logo.svg
+
+3. VERIFY THE LOGO
+   
+   - Open index.html in your browser
+   - The IBM logo should appear in the header
+   - If you don't see it, check:
+     * File name is exactly "ibm-logo.svg" (case-sensitive)
+     * File is in the assets/ folder
+     * File is a valid SVG format
+
+4. ALTERNATIVE: USE PNG FORMAT
+   
+   If you only have a PNG version:
+   - Save it as: ibm-logo.png
+   - Update the HTML files to reference .png instead of .svg
+   - In index.html, form.html, and detail.html, change:
+     <img src="assets/ibm-logo.svg" ...>
+     to:
+     <img src="assets/ibm-logo.png" ...>
+
+5. LOGO SPECIFICATIONS
+   
+   Recommended dimensions:
+   - Height: 32-48 pixels
+   - Format: SVG (preferred) or PNG
+   - Background: Transparent
+   - Color: White (for dark header) or IBM Blue
+
+NEED HELP?
+----------
+If you don't have access to the IBM logo:
+- Contact your IBM marketing team
+- Ask your manager for brand asset access
+- The application will work without the logo (it will be hidden automatically)
+
+For more IBM branding guidelines, see the README.md file.

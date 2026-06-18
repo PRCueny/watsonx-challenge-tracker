@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Use Case | watsonx Challenge Ideas Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <img src="assets/ibm-logo.svg" alt="IBM Logo" class="ibm-logo" onerror="this.style.display='none'">
+                <h1>watsonx Challenge Ideas</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">All Use Cases</a>
+                <a href="form.html" class="active">Submit New</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h2 class="page-title" id="pageTitle">Submit New Use Case</h2>
+        <p class="page-subtitle">Share your watsonx challenge idea with the team</p>
+
+        <div style="max-width: 900px;">
+            <form id="useCaseForm" class="detail-section">
+                <!-- Use Case Name -->
+                <div class="form-group">
+                    <label for="useCaseName" class="form-label">Use Case Name *</label>
+                    <input 
+                        type="text" 
+                        id="useCaseName" 
+                        name="name"
+                        class="form-input" 
+                        required
+                        placeholder="Enter a descriptive name for your use case"
+                    >
+                    <div class="form-helper">Give your use case a clear, memorable name</div>
+                    <div id="nameError" class="form-error hidden"></div>
+                </div>
+
+                <!-- Scope -->
+                <div class="form-group">
+                    <label for="scope" class="form-label">Scope *</label>
+                    <textarea 
+                        id="scope" 
+                        name="scope"
+                        class="form-textarea" 
+                        required
+                        placeholder="Describe the scope of your use case..."
+                    ></textarea>
+                    <div class="form-helper">What is the scope and context of this challenge?</div>
+                    <div id="scopeError" class="form-error hidden"></div>
+                </div>
+
+                <!-- Benefits -->
+                <div class="form-group">
+                    <label for="benefits" class="form-label">Benefits *</label>
+                    <textarea 
+                        id="benefits" 
+                        name="benefits"
+                        class="form-textarea" 
+                        required
+                        placeholder="Describe the expected benefits..."
+                    ></textarea>
+                    <div class="form-helper">What are the key benefits and value propositions?</div>
+                    <div id="benefitsError" class="form-error hidden"></div>
+                </div>
+
+                <!-- Outputs -->
+                <div class="form-group">
+                    <label for="outputs" class="form-label">Outputs *</label>
+                    <textarea 
+                        id="outputs" 
+                        name="outputs"
+                        class="form-textarea" 
+                        required
+                        placeholder="Describe the expected outputs and deliverables..."
+                    ></textarea>
+                    <div class="form-helper">What outputs or deliverables will this use case produce?</div>
+                    <div id="outputsError" class="form-error hidden"></div>
+                </div>
+
+                <!-- Comments/Notes -->
+                <div class="form-group">
+                    <label for="comments" class="form-label">Comments / Additional Notes</label>
+                    <textarea 
+                        id="comments" 
+                        name="comments"
+                        class="form-textarea" 
+                        placeholder="Add any additional comments, notes, or context..."
+                    ></textarea>
+                    <div class="form-helper">Optional: Add any additional information or context</div>
+                </div>
+
+                <!-- Team Members Section -->
+                <div class="form-group">
+                    <label class="form-label">Team Members *</label>
+                    <div class="form-helper mb-1">Add email addresses for all team members. You can add their names, titles, and photos on the detail page after submission.</div>
+                    
+                    <div id="emailList" class="email-list">
+                        <!-- Email inputs will be added here dynamically -->
+                    </div>
+                    
+                    <button type="button" onclick="addEmailField()" class="btn btn-ghost mt-1">
+                        ➕ Add Team Member
+                    </button>
+                    <div id="emailError" class="form-error hidden"></div>
+                </div>
+
+                <!-- Form Actions -->
+                <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        💾 Save Use Case
+                    </button>
+                    <button type="button" onclick="cancelForm()" class="btn btn-secondary">
+                        ✖️ Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/form.js"></script>
+</body>
+</html>

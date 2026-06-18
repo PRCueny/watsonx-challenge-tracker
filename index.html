@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watsonx Challenge Ideas Tracker | IBM</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <img src="assets/ibm-logo.svg" alt="IBM Logo" class="ibm-logo" onerror="this.style.display='none'">
+                <h1>watsonx Challenge Ideas</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html" class="active">All Use Cases</a>
+                <a href="form.html">Submit New</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h2 class="page-title">Challenge Use Cases</h2>
+        <p class="page-subtitle">Track and manage watsonx challenge ideas from teams across IBM</p>
+
+        <!-- Stats Section -->
+        <div class="stats" id="stats">
+            <div class="stat-card">
+                <div class="stat-value" id="totalUseCases">0</div>
+                <div class="stat-label">Total Use Cases</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalTeams">0</div>
+                <div class="stat-label">Teams Participating</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="totalMembers">0</div>
+                <div class="stat-label">Team Members</div>
+            </div>
+        </div>
+
+        <!-- Actions Bar -->
+        <div class="actions-bar">
+            <div class="actions-left">
+                <div class="search-bar">
+                    <span class="search-icon">🔍</span>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input" 
+                        placeholder="Search use cases by name, scope, benefits, or team member..."
+                    >
+                </div>
+            </div>
+            <div class="actions-right">
+                <button class="btn btn-ghost" onclick="exportData()">
+                    📥 Export Data
+                </button>
+                <button class="btn btn-ghost" onclick="importData()">
+                    📤 Import Data
+                </button>
+                <a href="form.html" class="btn btn-primary">
+                    ➕ New Use Case
+                </a>
+            </div>
+        </div>
+
+        <!-- Use Cases Grid -->
+        <div id="useCasesContainer">
+            <!-- Use cases will be dynamically loaded here -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="emptyState" class="empty-state hidden">
+            <div class="empty-state-icon">💡</div>
+            <h3 class="empty-state-title">No Use Cases Yet</h3>
+            <p class="empty-state-text">Get started by submitting your first watsonx challenge idea</p>
+            <a href="form.html" class="btn btn-primary">Submit Your First Use Case</a>
+        </div>
+    </main>
+
+    <!-- Hidden file input for import -->
+    <input type="file" id="importFileInput" accept=".json" style="display: none;">
+
+    <!-- Scripts -->
+    <script src="js/storage.js"></script>
+    <script src="js/summary.js"></script>
+</body>
+</html>
