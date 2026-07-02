@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watsonx Challenge Ideas - Live Data | IBM</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        .airtable-container {
+            width: 100%;
+            height: calc(100vh - 200px);
+            min-height: 600px;
+            margin: 2rem 0;
+        }
+        .airtable-embed {
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .info-banner {
+            background: #f0f7ff;
+            border: 1px solid #0f62fe;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            color: #0f62fe;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <img src="assets/ibm-logo.svg" alt="IBM Logo" class="ibm-logo" onerror="this.style.display='none'">
+                <h1>watsonx Challenge Ideas</h1>
+            </div>
+            <nav class="header-nav">
+                <a href="index.html">Local View</a>
+                <a href="airtable.html" class="active">Live Data</a>
+                <a href="https://airtable.com/appOrzCHmG98YM4jf/shrEFEEqz0VmzP9uM" target="_blank">Submit New</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h2 class="page-title">Live Challenge Use Cases from Airtable</h2>
+        <p class="page-subtitle">Real-time view of all watsonx challenge ideas - updates automatically</p>
+
+        <div class="info-banner">
+            📊 <strong>Live Data:</strong> This view shows real-time data directly from Airtable. 
+            All users see the same information, and changes appear instantly.
+        </div>
+
+        <!-- Airtable Embed -->
+        <div class="airtable-container">
+            <iframe class="airtable-embed" src="https://airtable.com/embed/appOrzCHmG98YM4jf/shrwrrfDg0Qujj3Zk" frameborder="0" onmousewheel="" width="100%" height="100%" style="background: transparent;"></iframe>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="https://airtable.com/appOrzCHmG98YM4jf/shrEFEEqz0VmzP9uM" target="_blank" class="btn btn-primary">
+                ➕ Submit New Use Case
+            </a>
+        </div>
+    </main>
+</body>
+</html>
