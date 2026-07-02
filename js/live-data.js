@@ -3,10 +3,14 @@
  * Loads data from static JSON file (no login required)
  */
 
+// Store all use cases globally for modal access
+let allUseCases = [];
+
 // Initialize page on load
 document.addEventListener('DOMContentLoaded', function() {
     loadUseCases();
     setupSearchListener();
+    setupModalCloseOnOutsideClick();
 });
 
 /**
@@ -24,7 +28,8 @@ async function loadUseCases(searchTerm = '') {
             throw new Error('Failed to load data');
         }
         
-        let useCases = await response.json();
+        allUseCases = await response.json();
+        let useCases = [...allUseCases];
         
         // Filter by search term if provided
         if (searchTerm) {
@@ -110,12 +115,125 @@ function createUseCaseCard(useCase) {
 }
 
 /**
- * View use case details
+ * View use case details in modal
  */
 function viewDetails(id) {
-    // For now, show an alert with the ID
-    // You can enhance this to show a modal or navigate to a detail page
-    alert(`View details for use case: ${id}\n\nThis feature can be enhanced to show full details in a modal or separate page.`);
+    const useCase = allUseCases.find(uc => uc.id === id);
+    if (!useCase) {
+        alert('Use case not found');
+        return;
+    }
+    
+    // Set modal title
+    document.getElementById('modalTitle').textContent = useCase.name;
+    
+    // Build modal content
+    const createdDate = new Date(useCase.createdAt).toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit'
+    });
+    
+    let modalContent = `
+        <div style="margin-bottom: 1.5rem;">
+            <p style="color: #666; font-size: 0.9rem;">
+                📅 Created: ${createdDate}
+                ${useCase.teamName ? ` • 🏢 Team: ${escapeHtml(useCase.teamName)}` : ''}
+            </p>
+        </div>
+    `;
+    
+    // Scope
+    if (useCase.scope) {
+        modalContent += `
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">📋 Scope</h3>
+                <p style="white-space: pre-wrap;">${escapeHtml(useCase.scope)}</p>
+            </div>
+        `;
+    }
+    
+    // Benefits
+    if (useCase.benefits) {
+        modalContent += `
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">✨ Benefits</h3>
+                <p style="white-space: pre-wrap;">${escapeHtml(useCase.benefits)}</p>
+            </div>
+        `;
+    }
+    
+    // Outputs
+    if (useCase.outputs) {
+        modalContent += `
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">📊 Expected Outputs</h3>
+                <p style="white-space: pre-wrap;">${escapeHtml(useCase.outputs)}</p>
+            </div>
+        `;
+    }
+    
+    // Comments
+    if (useCase.comments) {
+        modalContent += `
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">💬 Additional Comments</h3>
+                <p style="white-space: pre-wrap;">${escapeHtml(useCase.comments)}</p>
+            </div>
+        `;
+    }
+    
+    // Team Members
+    if (useCase.teamMembers && useCase.teamMembers.length > 0) {
+        modalContent += `
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👥 Team Members (${useCase.teamMembers.length})</h3>
+                <ul style="list-style: none; padding: 0;">
+                    ${useCase.teamMembers.map(member => `
+                        <li style="padding: 0.5rem; background: #f4f4f4; margin-bottom: 0.5rem; border-radius: 4px;">
+                            <strong>${escapeHtml(member.name || 'Unknown')}</strong>
+                            ${member.email ? `<br><a href="mailto:${escapeHtml(member.email)}" style="color: #0f62fe;">${escapeHtml(member.email)}</a>` : ''}
+                        </li>
+                    `).join('')}
+                </ul>
+            </div>
+        `;
+    }
+    
+    // Set modal body content
+    document.getElementById('modalBody').innerHTML = modalContent;
+    
+    // Show modal
+    document.getElementById('detailsModal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden'; // Prevent background scrolling
+}
+
+/**
+ * Close the modal
+ */
+function closeModal() {
+    document.getElementById('detailsModal').classList.add('hidden');
+    document.body.style.overflow = ''; // Restore scrolling
+}
+
+/**
+ * Setup click outside modal to close
+ */
+function setupModalCloseOnOutsideClick() {
+    document.getElementById('detailsModal').addEventListener('click', function(e) {
+        if (e.target.id === 'detailsModal') {
+            closeModal();
+        }
+    });
+    
+    // Also close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
 }
 
 /**
