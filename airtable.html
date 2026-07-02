@@ -41,13 +41,30 @@
         }
         .sso-steps ol {
             text-align: left;
-            max-width: 600px;
+            max-width: 700px;
             margin: 1rem auto;
             line-height: 1.8;
         }
+        .sso-steps li strong {
+            color: #0f62fe;
+        }
+        .refresh-button {
+            background: #0f62fe;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 1rem;
+            transition: background 0.3s;
+        }
+        .refresh-button:hover {
+            background: #0043ce;
+        }
         .airtable-container {
             width: 100%;
-            height: calc(100vh - 400px);
+            height: calc(100vh - 450px);
             min-height: 500px;
             margin: 0;
             padding: 0;
@@ -60,6 +77,15 @@
         .container {
             max-width: 100%;
             padding: 0;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem auto;
+            max-width: 700px;
+            border-radius: 4px;
+            text-align: center;
         }
     </style>
 </head>
@@ -93,11 +119,23 @@
         <div class="sso-steps">
             <h3>How to Access:</h3>
             <ol>
-                <li>Click anywhere in the Airtable view below</li>
-                <li>Sign in with your <strong>IBM email address</strong></li>
+                <li>Scroll down and <strong>click the "Sign in" button</strong> in the Airtable view below</li>
+                <li>Sign in with your <strong>IBM email address</strong> when prompted</li>
                 <li>Use your IBM SSO credentials</li>
-                <li>Once authenticated, you'll see the live challenge data in Gallery View</li>
+                <li><strong>After signing in, close the Airtable tab</strong></li>
+                <li><strong>Click the "Refresh Page" button below</strong> to load the data</li>
             </ol>
+            
+            <div class="warning-box">
+                ⚠️ <strong>Important:</strong> After signing into Airtable, you must refresh this page to see the data
+            </div>
+            
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <button class="refresh-button" onclick="location.reload()">
+                    🔄 Refresh Page After Login
+                </button>
+            </div>
+            
             <p style="text-align: center; color: #666; margin-top: 1.5rem;">
                 <em>This security measure ensures only IBM team members can access the data</em>
             </p>
