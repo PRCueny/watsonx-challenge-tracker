@@ -115,6 +115,29 @@ function createUseCaseCard(useCase) {
 }
 
 /**
+ * Extract name from email address
+ */
+function getNameFromEmail(email) {
+    if (!email) return '';
+    
+    // Remove any whitespace/newlines
+    email = email.trim();
+    
+    // Get the part before @
+    const localPart = email.split('@')[0];
+    
+    // Split by dots or underscores
+    const parts = localPart.split(/[._]/);
+    
+    // Capitalize each part
+    const name = parts
+        .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+        .join(' ');
+    
+    return name;
+}
+
+/**
  * View use case details in modal
  */
 function viewDetails(id) {
@@ -187,19 +210,44 @@ function viewDetails(id) {
     
     // Team Members
     if (useCase.teamMembers && useCase.teamMembers.length > 0) {
-        modalContent += `
-            <div style="margin-bottom: 1.5rem;">
-                <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👥 Team Members (${useCase.teamMembers.length})</h3>
-                <ul style="list-style: none; padding: 0;">
-                    ${useCase.teamMembers.map(member => `
-                        <li style="padding: 0.5rem; background: #f4f4f4; margin-bottom: 0.5rem; border-radius: 4px;">
-                            <strong>${escapeHtml(member.name || 'Unknown')}</strong>
-                            ${member.email ? `<br><a href="mailto:${escapeHtml(member.email)}" style="color: #0f62fe;">${escapeHtml(member.email)}</a>` : ''}
-                        </li>
-                    `).join('')}
-                </ul>
-            </div>
-        `;
+        // Separate team lead from other members
+        const teamLead = useCase.teamMembers[0];
+        const otherMembers = useCase.teamMembers.slice(1);
+        
+        // Team Lead
+        if (teamLead && teamLead.email) {
+            const leadName = teamLead.name || getNameFromEmail(teamLead.email);
+            modalContent += `
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👤 Team Lead</h3>
+                    <div style="padding: 0.75rem; background: #f4f4f4; border-radius: 4px;">
+                        <strong>${escapeHtml(leadName)}</strong>
+                        <br><a href="mailto:${escapeHtml(teamLead.email.trim())}" style="color: #0f62fe;">${escapeHtml(teamLead.email.trim())}</a>
+                    </div>
+                </div>
+            `;
+        }
+        
+        // Other Team Members
+        if (otherMembers.length > 0) {
+            modalContent += `
+                <div style="margin-bottom: 1.5rem;">
+                    <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👥 Team Members (${otherMembers.length})</h3>
+                    <div style="display: grid; gap: 0.5rem;">
+                        ${otherMembers.map(member => {
+                            if (!member.email) return '';
+                            const memberName = member.name || getNameFromEmail(member.email);
+                            return `
+                                <div style="padding: 0.75rem; background: #f4f4f4; border-radius: 4px;">
+                                    <strong>${escapeHtml(memberName)}</strong>
+                                    <br><a href="mailto:${escapeHtml(member.email.trim())}" style="color: #0f62fe;">${escapeHtml(member.email.trim())}</a>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+        }
     }
     
     // Set modal body content
