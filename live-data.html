@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>watsonx Challenge Ideas Tracker | IBM</title>
+    <title>watsonx Challenge Ideas - Live Data | IBM</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
@@ -16,8 +16,8 @@
                 <h1>watsonx Challenge Ideas</h1>
             </div>
             <nav class="header-nav">
-                <a href="index.html" class="active">Local View</a>
-                <a href="live-data.html">Live Data</a>
+                <a href="index.html">Local View</a>
+                <a href="live-data.html" class="active">Live Data</a>
                 <a href="https://airtable.com/appOrzCHmG98YM4jf/shrEFEEqz0VmzP9uM" target="_blank">Submit New</a>
             </nav>
         </div>
@@ -25,8 +25,8 @@
 
     <!-- Main Content -->
     <main class="container">
-        <h2 class="page-title">Challenge Use Cases</h2>
-        <p class="page-subtitle">Track and manage watsonx challenge ideas from teams across IBM</p>
+        <h2 class="page-title">Challenge Use Cases from Airtable</h2>
+        <p class="page-subtitle">View all watsonx challenge ideas - No login required!</p>
 
         <!-- Stats Section -->
         <div class="stats" id="stats">
@@ -58,15 +58,6 @@
                 </div>
             </div>
             <div class="actions-right">
-                <button class="btn btn-ghost" onclick="importFromCSV()">
-                    📊 Import from CSV
-                </button>
-                <button class="btn btn-ghost" onclick="exportData()">
-                    📥 Export Data
-                </button>
-                <button class="btn btn-ghost" onclick="importData()">
-                    📤 Import JSON
-                </button>
                 <a href="https://airtable.com/appOrzCHmG98YM4jf/shrEFEEqz0VmzP9uM" target="_blank" class="btn btn-primary">
                     ➕ New Use Case
                 </a>
@@ -87,13 +78,7 @@
         </div>
     </main>
 
-    <!-- Hidden file inputs for import -->
-    <input type="file" id="importFileInput" accept=".json" style="display: none;">
-    <input type="file" id="csvFileInput" accept=".csv" style="display: none;">
-
     <!-- Scripts -->
-    <script src="js/storage.js"></script>
-    <script src="js/csv-import.js"></script>
-    <script src="js/summary.js"></script>
+    <script src="js/live-data.js"></script>
 </body>
 </html>

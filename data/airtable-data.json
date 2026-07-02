@@ -1,0 +1,238 @@
+[
+  {
+    "id": "recHrpmr8WSavXG3Q",
+    "name": "IBM Consulting Brand Intelligence Agent",
+    "scope": "IBM Consulting's Brand Intelligence Assistant \u2014 the single source of\ntruth for IBM Consulting's messaging, narrative, and visual identity. YIt will ensure that every piece of communication, content, and creative output produced on behalf of IBM Consulting is consistent, compelling, and client-centric. A purpose-built strategic advisor that has internalized the full body of IBM Consulting's approved brand guidelines, messaging frameworks, narrative architecture, and visual identity standards. The agent will speak with authority on these matters because it has been trained on the definitive, leadership-approved source materials.\n",
+    "benefits": "- Serve as the authoritative reference for IBM Consulting's brand voice, messaging hierarchy, narrative structure, and visual identity standards\n- Help IBM Consulting practitioners \u2014 from consultants to creatives to leadership \u2014 produce content that is on-brand, on-message, and on-strategy\n- Eliminate inconsistency, fragmentation, and improvisation in how IBM Consulting shows up in the market\n- Accelerate content creation by providing instant, accurate guidance grounded in approved source materials\n- Act as a client-centric filter, ensuring that all outputs orient first around the client's world, challenges, and aspirations \u2014 not IBM's capabilities in isolation\n",
+    "outputs": "The agent will help with:\n- Value propositions and positioning statements\n- Messaging hierarchy and narrative structure\n- Audience-specific messaging adaptation\n- Executive summaries, elevator pitches, positioning statements\n- Voice and tone review; before/after rewrites\n- Visual identity guidance (typography, color, imagery, layout, logo usage)\n- Content structure for decks, proposals, emails, thought leadership\n- Personalizing approved messaging for specific industries and clients\n",
+    "comments": "",
+    "teamName": "IBMC Brand Ambassadors\n",
+    "teamMembers": [
+      {
+        "email": "polly.cueny@us.ibm.com\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "Christine.Selph@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "stephen.leps@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Simina.Andreea.Paunescu@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "msider@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "maneja1@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-07-01T18:32:31.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recMmYUhtXhUWmFDu",
+    "name": "Account based marketing agentic app",
+    "scope": "Develop an agentic app to help marketing teams plan and execute an account-based marketing (ABM) program by automatically identifying, organizing, and managing the required steps, checklists, and dependencies based on best practices. The app will support campaign setup from target account selection through launch and review, helping teams plan and execute campaign readiness activities in a consistent workflow.\u00a0The initial output will be a content personalization agent, which will later be a compnenet of the ABM agentic app.\n",
+    "benefits": "- Personalized content and landing pages for target account marketing\n- Standardized ABM process based on best practices that can be reused and scaled\n- Faster ABM campaign planning and execution\n- Reduced manual effort to build and manage checklists\n- Better visibility into campaign dependencies and readiness\n- Fewer missed steps before launch\n- Improved speed to market for campaign activation\n",
+    "outputs": "- Agent for creating personalized content\n- ABM campaign workflow framework\n- Step-by-step ABM checklist by phase\n- Target account and target contact planning checklist\n- Campaign asset checklist\n- Launch readiness checklist\n- Agentic app prototype\n",
+    "comments": "",
+    "teamName": "ABMers\n",
+    "teamMembers": [
+      {
+        "email": "kellyjo@us.ibm.com\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "Steven.T.Chong@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Carlos.Ruiz.Cervantes@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "kellyjo@us.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-06-26T19:22:46.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recONBU7geZgjSNyR",
+    "name": "IBM Consulting Thought Leadership Whitespace Agent 6r",
+    "scope": "This agent analyzes competitors, analysts, media, and market conversations to uncover the topics no one is leading. It then identifies and makes recommendations where IBM consultants can lead the narrative. \n",
+    "benefits": "- Helps our team find differentiated thought leadership opportunities, \n- Avoid crowded topics\n- Creates content that positions IBM consultants as thought leaders. \n",
+    "outputs": "- Highlights whitespace opportunities, market and competitor gap insights\n- Recommends narratives for content development.\n",
+    "comments": "",
+    "teamName": "Eminence LIGA\u00a0\n",
+    "teamMembers": [
+      {
+        "email": "Gio Moreano \\<Gio.Moreano@ibm.com>\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "Lauren Nowicki <Lauren.Nowicki@ibm.com>\nAnna Bedell <Anna.Bedell@ibm.com>\nIsaiah Akridge <isaiahakridge@ibm.com>\nGio Moreano <Gio.Moreano@ibm.com>",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-06-29T23:33:26.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recQlh73dPoNFTchP",
+    "name": "PMM Content Intelligence Agent",
+    "scope": "A centralized content intelligence agent that helps PMM teams quickly discover, reuse, and create product marketing assets across campaigns, events, and customer engagements. The agent connects to five IBM content sources \u2014 marketing assets, web, Box links, and SharePoint \u2014 to surface the most relevant existing content, then generates new branded outputs automatically from a single brief.\n",
+    "benefits": "- Eliminates manual content search across disconnected systems (Box, SharePoint, web, asset libraries)\n- Reduces time-to-content from hours to minutes for campaigns, events, and client engagements\n- Ensures brand consistency and message alignment across all generated outputs\n- Enables reuse of approved IBM Consulting assets, reducing duplicated effort across PMM teams\n\n",
+    "outputs": "Multi-format marketing content powered by AI and enterprise knowledge.\n",
+    "comments": "",
+    "teamName": "Prime Advantage\u00a0\n",
+    "teamMembers": [
+      {
+        "email": "komakh10@in.ibm.com\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "jhasperpaul@ibm.com\njohana.favela@ibm.com\nmatthew.herr@ibm.com\nWhitney.Leak@ibm.com\nAnjaney.Basedia1@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-07-02T10:54:03.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recTy2GnpOXtax20x",
+    "name": "Digital visibility intelligence platform (SEO, AEO and GEO)",
+    "scope": "This project aims to build an intelligent automation platform that continuously analyzes an organization\u2019s digital presence across traditional search engines (Google, Bing, etc.), AI-powered answer engines (Alexa, ok Google, etc.), as well as generative AI engines (CGPT, Copilot, Gemini). The solution will assess how effectively a brand, product, service, or content portfolio is positioned for discoverability across SEO, Answer Engine Optimization (AEO), and Generative Engine Optimization (GEO). It will combine data from mutiple sources including web crawling, semantic content analysis, entity recognition, intent mapping, and AI response analysis. Based on these inputs, the tool will generate recommendations that help marketing teams improve digital visibility to their target audience.\n",
+    "benefits": "The tool can enable marketing teams to move beyond conventional SEO and optimize for how users increasingly discover information through AI assistants and conversational search experiences.\u00a0\nIt will help improve organic visibility, strengthen brand presence in AI-generated responses, identify content gaps, and prioritize high-impact optimization opportunities.\u00a0\nBy automating complex analysis, the tool will reduce manual effort, while enabling faster adaptation to the constantly changing search and genAI ecosystems.\n",
+    "outputs": "Marketers will receive the following:\n1\\. Intelligence reports that highlights current performance across SEO, AEO and GEO channels. Outputs include keyword rankings, AI search visibility scores, competitor benchmarking, entity recognition analysis, content gap identification, answer engine optimization recommendations, generative AI citation tracking, authority scoring, and prioritized action plans. \n2\\. The tool will also provide ongoing recommendations for content creation, technical optimization, structured data improvements, and strategies to improve presence across AI-driven discovery platforms.\n",
+    "comments": "",
+    "teamName": "OmniSearch Agents\n",
+    "teamMembers": [
+      {
+        "email": "[bchandar@in.ibm.com](mailto:bchandar@in.ibm.com)\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "Ileana.Cipca1@ibm.com\naazmath3@in.ibm.com\nanca.dorissa@ibm.com\nPranav.Pacholee@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-07-02T10:18:44.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recaSBCCYTrGH1Foo",
+    "name": "Content Gap Radar",
+    "scope": "Build an intelligent agent powered\u00a0that\u00a0continuously analyzes multi-source data (SEO/GEO, competitor content, IBM content, web analytics, and email analytics) to produce a prioritized, actionable content roadmap \u2014 eliminating guesswork and ensuring IBM leads in every conversation that matters.\n",
+    "benefits": "- Eliminates guesswork through data-driven decision-making\n- Identifies high-impact content gaps and opportunities\n- Aligns content strategy with trends and real performance data\n- Improves prioritization across content types (web, blogs, whitepapers, etc.)\n- Increases efficiency through automation and draft generation\n- Helps ensure IBM leads in key conversations that matter\n",
+    "outputs": "- Prioritized content roadmap\n- Content gap and opportunity analysis\n- Competitive benchmarking insights\n- Performance-based recommendations\n- Draft content assets (blogs, web copy, whitepapers)\n- Trend and keyword insights linked to business outcomes\n",
+    "comments": "",
+    "teamName": "Content Radar\u00a0\n",
+    "teamMembers": [
+      {
+        "email": "Radu.Anghel1@ibm.com\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "andreea.pandelescu@ro.ibm.com\nmihaela.andrei@ro.ibm.com\nEnka.Birce@ibm.com\nEmily.Paez@ibm.com\nMadalina.Belciu@ro.ibm.com\nCarmen.Burcea@ibm.com\nkfletche@us.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-07-01T15:02:04.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recbWyC3W0GjZzmFs",
+    "name": "Client Reference end-to-end Publication Agent (Harvesting Agent - 2026)",
+    "scope": "Harvesting agent is the first agent for client reference creation from win wire stage to external publication agentic application. For watsonx challenge, we are committed to building the harvesting agent. The other agents and applications would continue to be delivered in sprints on time. \n",
+    "benefits": "- The harvesting agent sources this from various internal sources and speeds up the process\n",
+    "outputs": "- Will source information and create a winwire slide\n",
+    "comments": "",
+    "teamName": "Harvesting Agent - 2026\n",
+    "teamMembers": [
+      {
+        "email": "kate.hodges@ibm.com\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "skpeters@us.ibm.com \njonathan.wrona@ibm.com  \ndragos.bocancea@ibm.com\nmichael.chang@ibm.com\nmadeleine.barker@ibm.com\njeshade@us.ibm.com \nnaiara@br.ibm.com \ndeepak.puranik@in.ibm.com \namber@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-07-01T14:35:17.000Z",
+    "updatedAt": ""
+  },
+  {
+    "id": "recnDcuwxDqtO0D8s",
+    "name": "Event Management Agentification",
+    "scope": "Develop an agentic app to help PMM and GTM teams plan and execute events and launches by automatically identifying, organizing, and managing all required steps, checklists, deliverables, and dependencies based on event strategy best practices. The app will use foundational event strategy materials, event overview details, and launch inputs to generate complete event timelines and planning documents. It will dynamically adjust its workflow based on event format and inclusions. The team will test all available tools (including Bob, ICA, and Copilot) and use the best tools as needed to build the most effective solution.\n_This standardization creates efficiency in the planning cycle, giving teams more runway to focus on compelling messaging, content, and experiences._\n",
+    "benefits": "- Faster, standardized event planning processes that can be reused and scaled across teams with limited event support\n- Reduced manual administrative work to build event timelines, tasks, and checklists\n- Automatically applies best practice workflows across all event and launch types\n- Fewer missed steps across content, logistics, approvals, and follow-up\n- Clear visibility into dependencies, risks, and readiness status\n- Improved coordination between MCC disciplines like**_ _**PMM, GTM, comms, and executive stakeholders\n\n",
+    "outputs": "- Agentic app prototype with subagents for event format and specifics\n- Editable event, launch, and surround event workflow documents (Excel, PPT, etc.) mapping tasks, status, & dependencies\n- Planning timelines by phase (PTT/one-pager)\n- Event requirement checklists\n- Post-event follow-up workflows\n- Status summary and risk report\n\n",
+    "comments": "",
+    "teamName": "EventFlow PMMs\n",
+    "teamMembers": [
+      {
+        "email": "Jhartzog@ibm.com\n",
+        "name": "",
+        "title": "Team Lead",
+        "photo": ""
+      },
+      {
+        "email": "ALIYE.Ozcan@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      }
+    ],
+    "createdAt": "2026-06-26T21:46:10.000Z",
+    "updatedAt": ""
+  }
+]
