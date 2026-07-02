@@ -22,8 +22,8 @@ async function loadUseCases(searchTerm = '') {
         const container = document.getElementById('useCasesContainer');
         container.innerHTML = '<div style="text-align: center; padding: 2rem;">Loading data...</div>';
         
-        // Fetch data from JSON file
-        const response = await fetch('data/airtable-data.json');
+        // Fetch data from JSON file with cache busting
+        const response = await fetch('data/airtable-data.json?v=' + Date.now());
         if (!response.ok) {
             throw new Error('Failed to load data');
         }
@@ -116,25 +116,26 @@ function createUseCaseCard(useCase) {
 
 /**
  * Extract name from email address
+ * Handles formats like: polly.cueny@us.ibm.com -> Polly Cueny
  */
 function getNameFromEmail(email) {
     if (!email) return '';
     
-    // Remove any whitespace/newlines
-    email = email.trim();
+    // Clean the email - remove whitespace, newlines, etc.
+    email = email.trim().replace(/[\r\n]/g, '');
     
     // Get the part before @
     const localPart = email.split('@')[0];
     
-    // Split by dots or underscores
-    const parts = localPart.split(/[._]/);
+    // Replace dots and underscores with spaces, then split
+    const parts = localPart.replace(/[._]/g, ' ').split(' ').filter(p => p.length > 0);
     
     // Capitalize each part
     const name = parts
         .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
         .join(' ');
     
-    return name;
+    return name || email; // Fallback to email if parsing fails
 }
 
 /**
@@ -216,13 +217,15 @@ function viewDetails(id) {
         
         // Team Lead
         if (teamLead && teamLead.email) {
-            const leadName = teamLead.name || getNameFromEmail(teamLead.email);
+            const cleanEmail = teamLead.email.trim().replace(/[\r\n]/g, '');
+            const leadName = teamLead.name && teamLead.name.trim() ? teamLead.name.trim() : getNameFromEmail(cleanEmail);
+            
             modalContent += `
                 <div style="margin-bottom: 1.5rem;">
                     <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👤 Team Lead</h3>
                     <div style="padding: 0.75rem; background: #f4f4f4; border-radius: 4px;">
                         <strong>${escapeHtml(leadName)}</strong>
-                        <br><a href="mailto:${escapeHtml(teamLead.email.trim())}" style="color: #0f62fe;">${escapeHtml(teamLead.email.trim())}</a>
+                        <br><a href="mailto:${escapeHtml(cleanEmail)}" style="color: #0f62fe;">${escapeHtml(cleanEmail)}</a>
                     </div>
                 </div>
             `;
@@ -230,23 +233,30 @@ function viewDetails(id) {
         
         // Other Team Members
         if (otherMembers.length > 0) {
-            modalContent += `
-                <div style="margin-bottom: 1.5rem;">
-                    <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👥 Team Members (${otherMembers.length})</h3>
-                    <div style="display: grid; gap: 0.5rem;">
-                        ${otherMembers.map(member => {
-                            if (!member.email) return '';
-                            const memberName = member.name || getNameFromEmail(member.email);
-                            return `
-                                <div style="padding: 0.75rem; background: #f4f4f4; border-radius: 4px;">
-                                    <strong>${escapeHtml(memberName)}</strong>
-                                    <br><a href="mailto:${escapeHtml(member.email.trim())}" style="color: #0f62fe;">${escapeHtml(member.email.trim())}</a>
-                                </div>
-                            `;
-                        }).join('')}
+            const memberCards = otherMembers
+                .filter(member => member.email && member.email.trim())
+                .map(member => {
+                    const cleanEmail = member.email.trim().replace(/[\r\n]/g, '');
+                    const memberName = member.name && member.name.trim() ? member.name.trim() : getNameFromEmail(cleanEmail);
+                    return `
+                        <div style="padding: 0.75rem; background: #f4f4f4; border-radius: 4px;">
+                            <strong>${escapeHtml(memberName)}</strong>
+                            <br><a href="mailto:${escapeHtml(cleanEmail)}" style="color: #0f62fe;">${escapeHtml(cleanEmail)}</a>
+                        </div>
+                    `;
+                })
+                .join('');
+            
+            if (memberCards) {
+                modalContent += `
+                    <div style="margin-bottom: 1.5rem;">
+                        <h3 style="color: #0f62fe; margin-bottom: 0.5rem;">👥 Team Members (${otherMembers.filter(m => m.email && m.email.trim()).length})</h3>
+                        <div style="display: grid; gap: 0.5rem;">
+                            ${memberCards}
+                        </div>
                     </div>
-                </div>
-            `;
+                `;
+            }
         }
     }
     
@@ -336,4 +346,4 @@ function escapeHtml(text) {
     return div.innerHTML;
 }
 
-// Made with Bob
+// Made with Bob - v2.0
