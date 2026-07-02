@@ -211,6 +211,48 @@ function importData() {
 }
 
 /**
+ * Import data from CSV file (Airtable export)
+ */
+async function importFromCSV() {
+    const fileInput = document.getElementById('csvFileInput');
+    
+    if (!fileInput) {
+        alert('CSV file input not found. Please refresh the page.');
+        return;
+    }
+    
+    fileInput.onchange = async function(e) {
+        const file = e.target.files[0];
+        
+        if (!file) return;
+        
+        // Show loading message
+        const loadingMsg = 'Importing CSV data...';
+        console.log(loadingMsg);
+        
+        try {
+            // Import CSV using CSVImporter
+            const result = await CSVImporter.importFromCSV(file);
+            
+            if (result.success) {
+                alert(`✅ Success!\n\n${result.message}\n\nThe page will now refresh to show the imported data.`);
+                loadUseCases(); // Reload to show imported data
+            } else {
+                alert('❌ Import failed:\n\n' + result.message);
+            }
+        } catch (error) {
+            alert('❌ Error importing CSV file:\n\n' + error.message);
+            console.error('CSV import error:', error);
+        }
+        
+        // Reset file input
+        fileInput.value = '';
+    };
+    
+    fileInput.click();
+}
+
+/**
  * Utility: Truncate text to specified length
  */
 function truncateText(text, maxLength) {
