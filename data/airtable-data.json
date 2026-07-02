@@ -15,38 +15,14 @@
         "photo": ""
       },
       {
-        "email": "Christine.Selph@ibm.com",
-        "name": "",
-        "title": "",
-        "photo": ""
-      },
-      {
-        "email": "stephen.leps@ibm.com",
-        "name": "",
-        "title": "",
-        "photo": ""
-      },
-      {
-        "email": "Simina.Andreea.Paunescu@ibm.com",
-        "name": "",
-        "title": "",
-        "photo": ""
-      },
-      {
-        "email": "msider@ibm.com",
-        "name": "",
-        "title": "",
-        "photo": ""
-      },
-      {
-        "email": "maneja1@ibm.com",
+        "email": "Christine.Selph@ibm.com, stephen.leps@ibm.com, Simina.Andreea.Paunescu@ibm.com, msider@ibm.com, maneja1@ibm.com",
         "name": "",
         "title": "",
         "photo": ""
       }
     ],
     "createdAt": "2026-07-01T18:32:31.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-07-01"
   },
   {
     "id": "recMmYUhtXhUWmFDu",
@@ -64,26 +40,14 @@
         "photo": ""
       },
       {
-        "email": "Steven.T.Chong@ibm.com",
-        "name": "",
-        "title": "",
-        "photo": ""
-      },
-      {
-        "email": "Carlos.Ruiz.Cervantes@ibm.com",
-        "name": "",
-        "title": "",
-        "photo": ""
-      },
-      {
-        "email": "kellyjo@us.ibm.com",
+        "email": "Steven.T.Chong@ibm.com, Carlos.Ruiz.Cervantes@ibm.com, kellyjo@us.ibm.com",
         "name": "",
         "title": "",
         "photo": ""
       }
     ],
     "createdAt": "2026-06-26T19:22:46.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-26"
   },
   {
     "id": "recONBU7geZgjSNyR",
@@ -105,10 +69,28 @@
         "name": "Lauren Nowicki",
         "title": "",
         "photo": ""
+      },
+      {
+        "email": "Anna.Bedell@ibm.com",
+        "name": "Anna Bedell",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "isaiahakridge@ibm.com",
+        "name": "Isaiah Akridge",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Gio.Moreano@ibm.com",
+        "name": "Gio Moreano",
+        "title": "",
+        "photo": ""
       }
     ],
     "createdAt": "2026-06-29T23:33:26.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-29"
   },
   {
     "id": "recQlh73dPoNFTchP",
@@ -157,7 +139,7 @@
       }
     ],
     "createdAt": "2026-07-02T10:54:03.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-07-02"
   },
   {
     "id": "recTy2GnpOXtax20x",
@@ -200,7 +182,7 @@
       }
     ],
     "createdAt": "2026-07-02T10:18:44.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-07-02"
   },
   {
     "id": "recaSBCCYTrGH1Foo",
@@ -261,7 +243,7 @@
       }
     ],
     "createdAt": "2026-07-01T15:02:04.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-07-01"
   },
   {
     "id": "recbWyC3W0GjZzmFs",
@@ -334,7 +316,7 @@
       }
     ],
     "createdAt": "2026-07-01T14:35:17.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-07-01"
   },
   {
     "id": "recnDcuwxDqtO0D8s",
@@ -359,6 +341,6 @@
       }
     ],
     "createdAt": "2026-06-26T21:46:10.000Z",
-    "updatedAt": ""
+    "updatedAt": "2026-06-26"
   }
 ]
