@@ -9,7 +9,7 @@
     "teamName": "IBMC Brand Ambassadors\n",
     "teamMembers": [
       {
-        "email": "polly.cueny@us.ibm.com\n",
+        "email": "polly.cueny@us.ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
@@ -58,7 +58,7 @@
     "teamName": "ABMers\n",
     "teamMembers": [
       {
-        "email": "kellyjo@us.ibm.com\n",
+        "email": "kellyjo@us.ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
@@ -95,14 +95,14 @@
     "teamName": "Eminence LIGA\u00a0\n",
     "teamMembers": [
       {
-        "email": "Gio Moreano \\<Gio.Moreano@ibm.com>\n",
-        "name": "",
+        "email": "Gio.Moreano@ibm.com",
+        "name": "Gio Moreano ",
         "title": "Team Lead",
         "photo": ""
       },
       {
-        "email": "Lauren Nowicki <Lauren.Nowicki@ibm.com>\nAnna Bedell <Anna.Bedell@ibm.com>\nIsaiah Akridge <isaiahakridge@ibm.com>\nGio Moreano <Gio.Moreano@ibm.com>",
-        "name": "",
+        "email": "Lauren.Nowicki@ibm.com",
+        "name": "Lauren Nowicki",
         "title": "",
         "photo": ""
       }
@@ -120,13 +120,37 @@
     "teamName": "Prime Advantage\u00a0\n",
     "teamMembers": [
       {
-        "email": "komakh10@in.ibm.com\n",
+        "email": "komakh10@in.ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
       },
       {
-        "email": "jhasperpaul@ibm.com\njohana.favela@ibm.com\nmatthew.herr@ibm.com\nWhitney.Leak@ibm.com\nAnjaney.Basedia1@ibm.com",
+        "email": "jhasperpaul@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "johana.favela@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "matthew.herr@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Whitney.Leak@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Anjaney.Basedia1@ibm.com",
         "name": "",
         "title": "",
         "photo": ""
@@ -145,13 +169,31 @@
     "teamName": "OmniSearch Agents\n",
     "teamMembers": [
       {
-        "email": "[bchandar@in.ibm.com](mailto:bchandar@in.ibm.com)\n",
+        "email": "bchandar@in.ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
       },
       {
-        "email": "Ileana.Cipca1@ibm.com\naazmath3@in.ibm.com\nanca.dorissa@ibm.com\nPranav.Pacholee@ibm.com",
+        "email": "Ileana.Cipca1@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "aazmath3@in.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "anca.dorissa@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Pranav.Pacholee@ibm.com",
         "name": "",
         "title": "",
         "photo": ""
@@ -170,13 +212,49 @@
     "teamName": "Content Radar\u00a0\n",
     "teamMembers": [
       {
-        "email": "Radu.Anghel1@ibm.com\n",
+        "email": "Radu.Anghel1@ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
       },
       {
-        "email": "andreea.pandelescu@ro.ibm.com\nmihaela.andrei@ro.ibm.com\nEnka.Birce@ibm.com\nEmily.Paez@ibm.com\nMadalina.Belciu@ro.ibm.com\nCarmen.Burcea@ibm.com\nkfletche@us.ibm.com",
+        "email": "andreea.pandelescu@ro.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "mihaela.andrei@ro.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Enka.Birce@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Emily.Paez@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Madalina.Belciu@ro.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "Carmen.Burcea@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "kfletche@us.ibm.com",
         "name": "",
         "title": "",
         "photo": ""
@@ -195,13 +273,61 @@
     "teamName": "Harvesting Agent - 2026\n",
     "teamMembers": [
       {
-        "email": "kate.hodges@ibm.com\n",
+        "email": "kate.hodges@ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
       },
       {
-        "email": "skpeters@us.ibm.com \njonathan.wrona@ibm.com  \ndragos.bocancea@ibm.com\nmichael.chang@ibm.com\nmadeleine.barker@ibm.com\njeshade@us.ibm.com \nnaiara@br.ibm.com \ndeepak.puranik@in.ibm.com \namber@ibm.com",
+        "email": "skpeters@us.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "jonathan.wrona@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "dragos.bocancea@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "michael.chang@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "madeleine.barker@ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "jeshade@us.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "naiara@br.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "deepak.puranik@in.ibm.com",
+        "name": "",
+        "title": "",
+        "photo": ""
+      },
+      {
+        "email": "amber@ibm.com",
         "name": "",
         "title": "",
         "photo": ""
@@ -220,7 +346,7 @@
     "teamName": "EventFlow PMMs\n",
     "teamMembers": [
       {
-        "email": "Jhartzog@ibm.com\n",
+        "email": "Jhartzog@ibm.com",
         "name": "",
         "title": "Team Lead",
         "photo": ""
